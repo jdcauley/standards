@@ -1,0 +1,23 @@
+{
+  "name": "cuberis-standards",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cuberis/standards",
+  "authors": [
+    "jdcauley <jordan@cauley.co>"
+  ],
+  "description": "Development and Deployment Practices for Cuberis",
+  "main": "index.ejs",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/dependencies",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
