@@ -1,2 +1,19 @@
 @import "_bootstrap.less";
 @import "_variables.less";
+
+img {
+	transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+	-webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+	-moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+	-o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+	-ms-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+	.transition(all 1s ease);
+
+	&:hover {
+		transform: rotate(180deg) scale(1) skew(1deg) translate(0px);
+		-webkit-transform: rotate(180deg) scale(1) skew(1deg) translate(0px);
+		-moz-transform: rotate(180deg) scale(1) skew(1deg) translate(0px);
+		-o-transform: rotate(180deg) scale(1) skew(1deg) translate(0px);
+		-ms-transform: rotate(180deg) scale(1) skew(1deg) translate(0px);
+	}
+}
