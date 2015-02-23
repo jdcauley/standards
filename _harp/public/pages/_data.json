@@ -58,5 +58,15 @@
         "id": "gulp"
       }
     ]
+  },
+  {
+    "title": "Project Setup",
+    "slug": "setup",
+    "subnav": [
+      {
+        "title": "Adding to Github",
+        "id": "Github"
+      }
+    ]
   }
 ]
