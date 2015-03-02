@@ -1,4 +1,4 @@
-Every new project or maintenance client at Cuberis gets a dedicated Github repository. This provides a project with a usable history and is part of our deployment process.
+Any new or maintenance project gets a GitHub repo for code storage and management. If the client has both a production and maintenance server DeployHQ is set to use the Staging branch for the development server and the master branch for production. This provides a project with a consolidated and readable history and is part of our deployment process.
 
 To create a new repository a Development Team Member will log into Github and with in the Cuberis account create a new repository.
 
@@ -24,10 +24,19 @@ Cuberis has a specific branching structure for developing, staging and shipping 
 
 The primary primary branch for Development is the 'dev' branch. This branch should only ever have working code and should be the primary branch that work is merged into.
 
-The dev branch as sub branches labeled to indicate purpose.
+The 'dev' branch as sub branches labeled to indicate purpose.
 - **bug/branch-name** : These branches are specifically for dealing with a collection of smaller bug, they may be ended with the day the work is being done or the type of work, ie. jan26, css-updates, js-errors.
 - **issue/issue-number** : Branches prepended with issue/ are for specific larger scale issues reported in Github.
-- **feature/feature-name** : These branches are used in primary production as well as for ongoing development of new features.
+- **feature/feature-name** : These branches are used in primary production as well as for ongoing development of new features. There may be more than one of these branches to a feature as one may include backend or functional code while the other contains frontend.
+- **styles/general** : This branch and associated branches are for the creation and implementation of general purpose CSS/JS that are not directly associate with specific components.
+
+#### Staging
+
+The 'staging' branch does not have sub branches. This branch primary serves as a testing, and staging branch before anything is pushed to production. Code may sit in this branch until reaching an appropriate deployment branch when it is merged to master.
+
+#### Production
+
+The 'master' branch does not have sub branches. This branch should never be edited and is should be a direct representation/duplication of the code that is in production for any given project. As our deployments are triggered by any push to this branch it is critical that code be properly tested before being merged into master. Merges should only take place as a pull request from staging.
 
 ### Deployments
 
