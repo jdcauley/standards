@@ -51,6 +51,10 @@ Our app.less file then looks something like this:
 
 This system allows for an element's display characteristics to maintain a separation between *what* it is and *how* it looks on a page. This in turn allows for maximum reusability of code because form and function are distinct.
 
+####Nesting
+
+The only time that nested selectors should be used is with LESS' & operator. This is useful for making modifiers children of their more general counterparts, which keeps "sibling" styles grouped together for maximum legibility and order. This may also be useful for pseudoelements (i.e. :before and :after).
+
 ####Hyphenation
 
 There shall be no instances of double-hyphenation in class names.
