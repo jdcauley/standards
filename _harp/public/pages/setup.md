@@ -2,7 +2,7 @@ Any new or maintenance project gets a GitHub repo for code storage and managemen
 
 To create a new repository a Development Team Member will log into Github and with in the Cuberis account create a new repository.
 
-![Add a New Repo](http://localhost:9000/assets/img/add-new-repo.jpg)
+![Add a New Repo](http://cuberis.github.io/standards/assets/img/add-new-repo.jpg)
 
 Once the new repo is created the developer can make their initial commit.
 
@@ -46,12 +46,12 @@ Code that is ready for deployment to Production is pushed to the Master branch o
 
 After logging in at https://cuberis.deployhq.com, in the right sidebar is a Create New Project Widget.
 
-![New DeployHQ Project](/assets/img/create-new-project-deployhq.png)
+![New DeployHQ Project](http://cuberis.github.io/standards/assets/img/create-new-project-deployhq.png)
 
 This will take you to the following screen where you will name the project accordingly.
 
-![Name Your Project](/assets/img/name-your-project-deployhq.png)
+![Name Your Project](http://cuberis.github.io/standards/assets/img/name-your-project-deployhq.png)
 
 Under Repository Details, you can authenticate to Github and select the appropriate project
 
-![Repo Details](/assets/img/repo-details-deployhq.png)
+![Repo Details](http://cuberis.github.io/standards/assets/img/repo-details-deployhq.png)
