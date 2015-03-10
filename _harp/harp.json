@@ -1,7 +1,8 @@
 {
+  "domains": [""],
   "globals": {
-    "site_title": "Cuberis Development Standards",
+    "site_title": "Cuberis Standards",
     "twitter": "@cuberis",
-    "site_url": ""
+    "base_url": "/"
   }
 }
