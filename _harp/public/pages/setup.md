@@ -42,4 +42,16 @@ The 'master' branch does not have sub branches. This branch should never be edit
 
 Code that is ready for deployment to Production is pushed to the Master branch of the project. That branch is then deployed to the appropriate production server, presently via [DeployHQ](https://cuberis.deployhq.com/).
 
-To set up repository with DeployHQ
+#### Setting up a Project in DeployHQ
+
+After logging in at https://cuberis.deployhq.com, in the right sidebar is a Create New Project Widget.
+
+![New DeployHQ Project](/assets/img/create-new-project-deployhq.png)
+
+This will take you to the following screen where you will name the project accordingly.
+
+![Name Your Project](/assets/img/name-your-project-deployhq.png)
+
+Under Repository Details, you can authenticate to Github and select the appropriate project
+
+![Repo Details](/assets/img/repo-details-deployhq.png)
