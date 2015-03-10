@@ -41,3 +41,5 @@ The 'master' branch does not have sub branches. This branch should never be edit
 ### Deployments
 
 Code that is ready for deployment to Production is pushed to the Master branch of the project. That branch is then deployed to the appropriate production server, presently via [DeployHQ](https://cuberis.deployhq.com/).
+
+To set up repository with DeployHQ
