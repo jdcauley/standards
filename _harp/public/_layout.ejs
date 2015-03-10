@@ -29,7 +29,7 @@
           <% var pages = public.pages._data;
              for(var k = 0; k < pages.length; k++){ %>
             <li>
-              <a href="/pages/<%= pages[k].slug %>"><%= pages[k].title %></a>
+              <a href="<%= base_url %>/pages/<%= pages[k].slug %>"><%= pages[k].title %></a>
             </li>
           <% } %>
 
