@@ -1,4 +1,56 @@
-####app.less and what it means for _you_
+Table of Contents
+
+* Introduction
+* LESS as a Framework
+	* _explanation_
+	* _also support SASS and vanilla CSS if necessary_
+* Basics
+	* Ruleset Guidelines
+		* Basic Syntax
+			* _opening brace on same line as selector_
+			* _one space before opening brace_
+			* _properties and values on the same line_
+			* _one space after colon that follows property name_
+			* _each property/value declaration on its own line_
+			* _each property/value declaration indented_
+			* _closing brace on its own line_
+		* Supplemental Syntax
+			* _in rulesets with multiple selectors, each selector on its own line_
+	* Classes and IDs
+		* _IDs reserved for JS selectors_
+		* ID Naming Conventions
+			* _'#js-...'_
+		* Class Naming Conventions
+			* 
+* Organization
+	* Table of Contents
+	* Comments
+		* Sectioning Comments
+		* Descriptive Comments
+	* Meaningful Whitespace
+		* Between Rulesets
+		* Delimiting Sections
+		* Aligning Values of Related Declarations (Optional)
+* File Structure
+	* Overview
+		* _app_
+		* _normalize_
+		* _tools_
+		* _globals_
+		* _components_
+	* App
+		* _table of contents, comments, and imports only&mdash;no rulesets_
+	* Normalize
+		* _required_
+		* _imported first_
+
+In progres...
+
+
+
+***
+
+##app.less and what it means for _you_
 
 Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.
 
@@ -51,11 +103,11 @@ Our app.less file then looks something like this:
 
 This system allows for an element's display characteristics to maintain a separation between *what* it is and *how* it looks on a page. This in turn allows for maximum reusability of code because form and function are distinct.
 
-####Nesting
+##Nesting
 
 The only time that nested selectors should be used is with LESS' & operator. This is useful for making modifiers children of their more general counterparts, which keeps "sibling" styles grouped together for maximum legibility and order. This may also be useful for pseudoelements (i.e. :before and :after).
 
-####Hyphenation
+##Hyphenation
 
 There shall be no instances of double-hyphenation in class names.
 
