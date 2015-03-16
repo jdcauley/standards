@@ -50,16 +50,6 @@
     ]
   },
   {
-    "title": "Tooling",
-    "slug": "tooling",
-    "subnav": [
-      {
-        "title": "Gulp",
-        "id": "gulp"
-      }
-    ]
-  },
-  {
     "title": "Project Setup",
     "slug": "setup",
     "subnav": [

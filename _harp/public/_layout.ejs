@@ -38,13 +38,13 @@
           <% if(page && page.subnav){ %>
             <%- partial('_partials/subnav', {subnav: page.subnav}) %>
           <% } %>
+          <article class="content">
+            <% if(page && page.title){ %>
+              <h1><%= page.title %></h1>
+            <% } %>
 
-          <% if(page && page.title){ %>
-            <h1><%= page.title %></h1>
-          <% } %>
-
-          <%- yield %>
-
+            <%- yield %>
+          </article>
         </main>
       </div>
     </div>
@@ -57,5 +57,20 @@
         </div>
       </div>
     </footer>
+
+    <script src="//cdn.jsdelivr.net/ace/1.1.8/min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.jsdelivr.net/ace/1.1.8/min/ext-beautify.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        var pre = document.getElementsByTagName('pre');
+
+        for(var i = 0, x = pre.length; i < x; i++){
+          var editor = ace.edit(pre[i]);
+          editor.setTheme("ace/theme/twilight");
+          editor.getSession().setMode("ace/mode/less");
+          editor.getSession().setTabSize(2);
+        }
+
+    </script>
   </body>
 </html>
