@@ -44,11 +44,99 @@ Table of Contents
 		* _required_
 		* _imported first_
 
-In progres...
-
-
+In progress...
 
 ***
+
+**Introduction**
+
+Cuberis projects use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at [lesscss.org](http://lesscss.org).
+
+Projects in vanilla CSS or other pre-processors such as Sass are also supported, if necessary.
+
+Cuberis' CSS standards are heavily influenced by (**but differ from**) [Harry Roberts' CSS guidelines](http://cssguidelin.es/).
+
+## Rulesets
+
+The following terminology when discussing CSS rulesets is used at Cuberis:
+
+	[selector] {
+		[property]: [value];
+	}
+
+Property/value combinations are refered to as **declarations**.
+
+### Syntax
+
+#### Basic Syntax
+Cuberis has strict standards regarding how rulesets are written—for example:
+
+	.feature-story,
+	.blog-post {
+		display: inline-block;
+		position: relative;
+		width: 25%;
+		margin: 2rem 0;
+		background: papayawhip;
+	}
+
+You'll notice the example above follows these guidelines:
+
+1. In rulesets with multiple, comma-delimited selectors, each selector is on its own line
+2. The opening bracket is on the same line as the last selector, separated from the last selector by a single space
+3. Property/value declarations each appear on a single line
+4. Each property/value declaration is indented once
+5. The closing brace is on its own line
+6. The closing brace is at the same indent level as the selector(s)
+
+<!---
+Additionally, properties should ideally be ordered as follows (some properties omitted for brevity):
+
+1. display
+2. position
+3. [dimensions]
+	1. width
+	2. max-width
+	3. height
+	4. max-height
+4. [box]
+	1. margin
+	2. padding
+	3. box-sizing
+5. [positioning]
+	1. top
+	2. left
+	3. right
+	3. bottom
+6. 
+-->
+
+#### Coumpound Selectors
+
+**Compound selectors** are selectors comprised of more than one chained selector. There are six types of selectors, and each can be used as part of a compound selector: **element selectors**, **IDs**, **classes**, **attribute selectors**, **pseudo-selectors** and **pseudo-elements**. These selectors should be combined in this order.
+
+Examples of **incorrectly** combined compound selectors:
+
+	.navigation#main-navigation {...}
+	[data-name].orange {...}
+
+Examples of **correctly** combined compound selectors:
+
+	p.footnote.teal {...}
+	.person:nth-child(odd)::after {...}
+
+
+
+
+
+
+
+
+
+
+
+
+<!---
 
 ##app.less and what it means for _you_
 
@@ -110,5 +198,7 @@ The only time that nested selectors should be used is with LESS' & operator. Thi
 ##Hyphenation
 
 There shall be no instances of double-hyphenation in class names.
+
+-->
 
 
