@@ -66,9 +66,7 @@ The following terminology when discussing CSS rulesets is used at Cuberis:
 
 Property/value combinations are refered to as **declarations**.
 
-### Syntax
-
-#### Basic Syntax
+### Basic Syntax
 Cuberis has strict standards regarding how rulesets are written—for example:
 
 	.feature-story,
@@ -77,7 +75,7 @@ Cuberis has strict standards regarding how rulesets are written—for example:
 		position: relative;
 		width: 25%;
 		margin: 2rem 0;
-		background: papayawhip;
+		background: url("../images/durham.jpg");
 	}
 
 You'll notice the example above follows these guidelines:
@@ -88,6 +86,7 @@ You'll notice the example above follows these guidelines:
 4. Each property/value declaration is indented once
 5. The closing brace is on its own line
 6. The closing brace is at the same indent level as the selector(s)
+7. Double quotes are used for strings
 
 <!---
 Additionally, properties should ideally be ordered as follows (some properties omitted for brevity):
@@ -111,9 +110,48 @@ Additionally, properties should ideally be ordered as follows (some properties o
 6. 
 -->
 
-#### Coumpound Selectors
+### Basic Selectors
 
-**Compound selectors** are selectors comprised of more than one chained selector. There are six types of selectors, and each can be used as part of a compound selector: **element selectors**, **IDs**, **classes**, **attribute selectors**, **pseudo-selectors** and **pseudo-elements**. These selectors should be combined in this order.
+There are six types of selectors: **element selectors**, **IDs***, **classes**, **attribute selectors**, **pseudo-class** and **pseudo-elements**.
+
+#### ID Selectors
+
+Selectors using IDs are not permitted in Cuberis stylesheets in order to avoid specificity issues and ensure the maintanability and extensibility of codebases over time by multiple developers. Existing classes should be used if possible, or a class should be added to the element if no suitable one exists.
+
+IDs are reserved for targeting DOM elements with javascript. View the [javascript standards page](#) for naming conventions and more information.
+
+#### Class Selectors
+
+	.main-navigation {...}
+
+1. Class names should be semantic to their function
+2. Classes should be all lowercase
+3. Classes needing more than one word should be hyphen delimited
+4. Class names should be short, but as long as necessary to convey their purpose
+
+Refer to the [components section](#) below for additional guidelines on class usage.
+
+#### Attribute Selectors
+
+	[data-region^="local"] {...}
+
+1. If attribute an attribute selector has a value, the value should be in double quotes
+
+#### Pseudo-Class
+
+	selector:hover {...}
+
+1. Pseudo-class should be delimited by a single colon
+2. If a pseudo-class has a value, the value (even if it is a string, such as "odd") should **not** be wrapped in quotes
+
+#### Pseudo-Elements
+
+	selector::after {...}
+1. Pseudo-elements should be delimited by **two** colons
+
+#### Compound Selectors
+
+Compound selectors are selectors comprised of more than one chained selector. Selectors should be ordered by type, in the following sequence: element selectors, IDs*, classes, attribute selectors, pseudo-class and pseudo-elements.
 
 Examples of **incorrectly** combined compound selectors:
 
@@ -125,8 +163,52 @@ Examples of **correctly** combined compound selectors:
 	p.footnote.teal {...}
 	.person:nth-child(odd)::after {...}
 
+_*See section above regarding usage of IDs in Cuberis stylesheets_
 
+#### Selector Performance
 
+CSS is evaluated from **right to left**, meaning that with a selector
+
+## Components
+There are three main types of classes—component classes, element classes and modifier classes.
+
+**component** and **element classes** can be thought of as nouns, targeting specific elements and groups of elements (respectively) based on what they are—their identity and function.
+
+For instance, a leadership page on an organization's website might feature headshots and titles of their leadership:
+
+	<section>
+		<header>
+			<h1>Leadership</h1>
+			<p>Our great leadership.</p>
+		</header>
+
+		<figure class="person">
+			<img class="person headshot" ... />
+			<figcaption>
+				<p class="person name">Jean-Luc Picard</p>
+				<p class="person title">Captain</p>
+			</figcaption>
+		</figure>
+
+		<figure class="person">
+			<img class="person headshot" ... />
+			<figcaption>
+				<p class="person name">William Riker</p>
+				<p class="person title">First Officer</p>
+			</figcaption>
+		</figure>
+
+		<figure class="person">
+			<img class="person headshot" ... />
+			<figcaption>
+				<p class="person name">Geordi La Forge</p>
+				<p class="person title">Chief Engineer</p>
+			</figcaption>
+		</figure>
+
+		[...]
+
+	</section>
 
 
 
