@@ -1,17 +1,119 @@
-###Indenting and spacing
+##Table of Contents
 
-The preferred spacing style for Javascript is one tab set to two spaces.
+* General Principles
+* Syntax
+    * Indenting
+    * White space
+        * Line Breaks
+        * Parentheses
+    * 
+* Variables
+    * Naming
+        * Booleans
+        * Single-letter variables
+    * Declarations
+* Functions
+* For Loops
+* jQuery
 
-Some members like have spaces on the inside of parantheses, some don't This is fine:
+***
 
-    if(boolean)
+##General Principles
 
-and this is also fine:
+The goal of this style guide to promote clean, efficient, and perhaps most importantly, readable code. To achieve this goal, we seek to have consistently and logically formatted code.
 
-    if( boolean )
+##Syntax
+
+###Indenting
+
+Our preferred indent style for JavaScript is one tab set to two space.
+
+###White space
+
+Our preferred use of white space
 
 
-###Variable Declarations
+####Line breaks
+
+Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:
+
+    function function1(){
+        ...
+        ...
+        ...
+    }
+
+    function function2(){
+        ...
+        ...
+        ...
+    }
+
+This is wrong:
+
+    function function1(){
+        ...
+
+        ...
+
+        ...
+        ...
+    }
+    function function2(){
+        ...
+    }
+
+####Parentheses
+
+Our preferred style of spacing for statements inside of parentheses is to have a space between the parentheses and the statement inside.
+
+This is correct:
+
+    function( param1, param2 ){
+        if( boolean ){
+            ...
+        }
+    }
+
+This is wrong: 
+
+    function(param1){
+        if(boolean){
+            ...
+        }
+    }
+
+
+###Logical operators
+
+Our preferred style of handling logical statements with one boolean is to not include a
+
+    if( isCorrect ){
+        ...
+    }
+
+    if( !isCorrect ){
+        ...
+    }
+
+This is wrong:
+
+    if( isCorrect == true ){
+        ...
+    }
+
+    if( isCorrect != true ){
+
+    }
+
+
+##Variables
+
+###Naming
+
+Variables should be camel-cased and descriptively named.   
+
+###Declarations
 
 When possible, variables should be instantiated with one use of the "var" keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word "var" is better for performance.
 
@@ -29,31 +131,27 @@ This isnt:
     var green;
     var blue;
 
-####Variable Naming
 
-Variables should be camel-cased and descriptively named.     
+###Booleans
 
-#####Booleans
-Booleans should be written as verbCondition--where "verb" is ideally copulative. This is great:
+Booleans should be written as "isCondition" or "hasProperty" so that they can be immediately recognized as booleans. These are fine:
 
     hasCorrectName = true;
-
-this is even better:
-
     isCorrectlyNamed = true;
 
-this is wrong:
+but this isn't:
 
     correctName = false;
 
+###Single-letter variables
 
-#####Single-letter variable names
+Single-letter variables should be avoided in any case except for instantiating a for loop.
 
-Single-letter variables are appropriate for and _only_ for instantiating for loops. Speaking of which...
+##Loops
 
 ###For Loops
 
-A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the "var" keyword. This is correct:
+A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the "var" keyword and thereby saving processing power. This is correct:
 
     for( var i=0, x=array.length; i<x; i++ ){
       {...}
@@ -70,39 +168,20 @@ while these are not:
       {...}
     }
 
+##jQuery
 
-####Variable Scoping
+jQuery is a powerful library that makes performing DOM manipulation much easier. But like all powerful things, it must be checked.
 
-First, let's remember that JavaScript hoists variables. This means that this:
+###Objects
 
+If a jQuery object is to be used multiple times, it should be declared as a variable, to cut down on both redundant objects and use of the $() function. Example:
 
-    x = 4;
-    var x;
+    var header = $( '.header' ),
+        headerHeight = header.height();
 
-delivers the same result as:
+Some people like to preface variables that are jQuery objects with a $ (e.g. $header) and this is fine but not required.
 
-    var x;
-    x = 4;
+###Selectors
 
-Now, let's forget that JavaScript hoists variable declarations. Don't write any code that uses this, because it makes everything extremely unreadable.
-
-For maximum clarity, declare all variables in a block at the top of their scope level. For instance:
-
-    function returnNegative100(){
-        var number1 = 5,
-            number2 = 10,
-            number3 = 20;
-
-        return ( number1 - number2 ) * number3;
-    }
-
-is better than:
-
-    var number1 = 5,
-        number2 = 10,
-        number3 = 20;
-    function returnNegative100(){
-        return( number1 - number2 ) * number3;
-    }
-
-Because no other function should have access to those variables (this is assuming of course that no other function should have access to those variables, which is really hard to prove in a short example). This protects you from having unexpectedly rewritten variables, and it keeps everything nice and readable because everything is moved as close to its actual use situation as possible.
+Selectors should be as concise as possible
+jQuery selectors should be as concise as possible. Each additional sele
