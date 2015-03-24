@@ -13,7 +13,7 @@
     </header>
     <div class="container">
       <div class="row">
-        <aside class="col-sm-4">
+        <aside class="col-sm-3">
           <h3>Table of Contents</h3>
           <ul>
             <li>
@@ -21,7 +21,11 @@
             </li>
           
             <li>
-              <a href="/standards/pages/deployment">Deployment</a>
+              <a href="/standards/pages/setup">Project Setup</a>
+            </li>
+          
+            <li>
+              <a href="/standards/pages/git">GIT and GitHub</a>
             </li>
           
             <li>
@@ -29,32 +33,18 @@
             </li>
           
             <li>
-              <a href="/standards/pages/html">HTML</a>
-            </li>
-          
-            <li>
-              <a href="/standards/pages/git">GIT</a>
-            </li>
-          
-            <li>
               <a href="/standards/pages/js">Javascript</a>
             </li>
           
             <li>
-              <a href="/standards/pages/tooling">Tooling</a>
-            </li>
-          
-            <li>
-              <a href="/standards/pages/setup">Project Setup</a>
+              <a href="/standards/pages/wp">WordPress</a>
             </li>
           
 
         </aside>
-        <main class="col-sm-8">
+        <main class="col-sm-9">
           
             
-  <a href="#Github">Adding to Github</a>
-
 
           
 
@@ -62,7 +52,11 @@
             <h1>Project Setup</h1>
           
 
-          <p>Any new or maintenance project gets a GitHub repo for code storage and management. If the client has both a production and maintenance server DeployHQ is set to use the Staging branch for the development server and the master branch for production. This provides a project with a consolidated and readable history and is part of our deployment process.</p>
+          <h3>Getting Started</h3><p>Cuberis generally uses 2 environments for development of projects. Harp.js for Static sites and templates and Vagrant for PHP environments.</p>
+<p>We use the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV">Varying Vagrant</a> to build PHP projects as a shareable, stable and self containted environment. The documentation on the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV">Varying Vagrant</a> provides an excellent primer on both <a href="https://www.vagrantup.com/">Vagrant</a> as well as building projects with in the environment.</p>
+<p>We typically use <a href="http://harpjs.com/">Harp.js</a> when working on static sites or crafting initial templates for its speed and easy of use. Projects are self contained and easy to share within the team via GitHub.</p>
+<p>While these tools are prefered Cuberis works to continually evaluate the best tool for internal projects as well as project needs.</p>
+<p>Any new or maintenance project gets a GitHub repo for code storage and management. If the client has both a production and maintenance server DeployHQ is set to use the Staging branch for the development server and the master branch for production. This provides a project with a consolidated and readable history and is part of our deployment process.</p>
 <p>To create a new repository a Development Team Member will log into Github and with in the Cuberis account create a new repository.</p>
 <p><img src="http://cuberis.github.io/standards/assets/img/add-new-repo.jpg" alt="Add a New Repo"></p>
 <p>Once the new repo is created the developer can make their initial commit.</p>
@@ -101,5 +95,8 @@
         </div>
       </div>
     </footer>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>

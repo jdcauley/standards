@@ -13,7 +13,7 @@
     </header>
     <div class="container">
       <div class="row">
-        <aside class="col-sm-4">
+        <aside class="col-sm-3">
           <h3>Table of Contents</h3>
           <ul>
             <li>
@@ -21,7 +21,11 @@
             </li>
           
             <li>
-              <a href="/standards/pages/deployment">Deployment</a>
+              <a href="/standards/pages/setup">Project Setup</a>
+            </li>
+          
+            <li>
+              <a href="/standards/pages/git">GIT and GitHub</a>
             </li>
           
             <li>
@@ -29,32 +33,18 @@
             </li>
           
             <li>
-              <a href="/standards/pages/html">HTML</a>
-            </li>
-          
-            <li>
-              <a href="/standards/pages/git">GIT</a>
-            </li>
-          
-            <li>
               <a href="/standards/pages/js">Javascript</a>
             </li>
           
             <li>
-              <a href="/standards/pages/tooling">Tooling</a>
-            </li>
-          
-            <li>
-              <a href="/standards/pages/setup">Project Setup</a>
+              <a href="/standards/pages/wp">WordPress</a>
             </li>
           
 
         </aside>
-        <main class="col-sm-8">
+        <main class="col-sm-9">
           
             
-  <a href="#js">JavaScript</a>
-
 
           
 
@@ -62,17 +52,107 @@
             <h1>Javascript</h1>
           
 
-          <h4>Indenting and spacing</h4><p>The preferred spacing style for Javascript is one tab set to two spaces.</p>
-<p>Some members like have spaces on the inside of parantheses, some don&#39;t. This practice (or lack thereof) should be neither frowned upon nor smiled at; but rather, looked at with a stern and stoic countenance befitting a team of adults who are capable of reading other people&#39;s code without splitting hairs.</p>
+          <h2>Table of Contents</h2><ul>
+<li>General Principles</li>
+<li>Syntax<ul>
+<li>Indenting</li>
+<li>White space<ul>
+<li>Line Breaks</li>
+<li>Parentheses</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li>Variables<ul>
+<li>Naming<ul>
+<li>Booleans</li>
+<li>Single-letter variables</li>
+</ul>
+</li>
+<li>Declarations</li>
+</ul>
+</li>
+<li>Functions</li>
+<li>For Loops</li>
+<li>jQuery</li>
+</ul>
+<hr>
+<h2>General Principles</h2><p>The goal of this style guide to promote clean, efficient, and perhaps most importantly, readable code. To achieve this goal, we seek to have consistently and logically formatted code.</p>
+<h2>Syntax</h2><h3>Indenting</h3><p>Our preferred indent style for JavaScript is one tab set to two space.</p>
+<h3>White space</h3><p>Our preferred use of white space</p>
+<h4>Line breaks</h4><p>Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:</p>
+<pre><code>function function1(){
+    ...
+    ...
+    ...
+}
+
+function function2(){
+    ...
+    ...
+    ...
+}
+</code></pre><p>This is wrong:</p>
+<pre><code>function function1(){
+    ...
+
+    ...
+
+    ...
+    ...
+}
+function function2(){
+    ...
+}
+</code></pre><h4>Parentheses</h4><p>Our preferred style of spacing for statements inside of parentheses is to have a space between the parentheses and the statement inside.</p>
+<p>This is correct:</p>
+<pre><code>function( param1, param2 ){
+    if( boolean ){
+        ...
+    }
+}
+</code></pre><p>This is wrong: </p>
+<pre><code>function(param1){
+    if(boolean){
+        ...
+    }
+}
+</code></pre><h3>Logical operators</h3><p>Our preferred style of handling logical statements with one boolean is to not include a</p>
+<pre><code>if( isCorrect ){
+    ...
+}
+
+if( !isCorrect ){
+    ...
+}
+</code></pre><p>This is wrong:</p>
+<pre><code>if( isCorrect == true ){
+    ...
+}
+
+if( isCorrect != true ){
+
+}
+</code></pre><h2>Variables</h2><h3>Naming</h3><p>Variables should be camel-cased and descriptively named.   </p>
+<h3>Declarations</h3><p>When possible, variables should be instantiated with one use of the &quot;var&quot; keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word &quot;var&quot; is better for performance.</p>
 <p>This is fine:</p>
-<pre><code>if(boolean)
-</code></pre><p>and this is also fine:</p>
-<pre><code>if( boolean )
-</code></pre><p>The important thing is that your code is readable, and if a space (or lack thereof) is stopping your code from being readable, you probably have larger problems.</p>
-<p>We&#39;re serious about the tab/spacing thing, though.</p>
-<h4>Variable declarations</h4><p>When possible, variables should be instantiated with one use of the &quot;var&quot; keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word &quot;var&quot; is better for performance.</p>
-<p>We&#39;ll define &quot;scope&quot; later, but just remember that not everything should be globally-accessible.</p>
-<h4>For Loops</h4><p>A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the &quot;var&quot; keyword. This is correct:</p>
+<pre><code>var red,
+    orange,
+    green,
+    blue;
+</code></pre><p>This isnt:</p>
+<pre><code>var red;
+var orange;
+var green;
+var blue;
+</code></pre><h3>Booleans</h3><p>Booleans should be written as &quot;isCondition&quot; or &quot;hasProperty&quot; so that they can be immediately recognized as booleans. These are fine:</p>
+<pre><code>hasCorrectName = true;
+isCorrectlyNamed = true;
+</code></pre><p>but this isn&#39;t:</p>
+<pre><code>correctName = false;
+</code></pre><h3>Single-letter variables</h3><p>Single-letter variables should be avoided in any case except for instantiating a for loop.</p>
+<h2>Loops</h2><h3>For Loops</h3><p>A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the &quot;var&quot; keyword and thereby saving processing power. This is correct:</p>
 <pre><code>for( var i=0, x=array.length; i&lt;x; i++ ){
   {...}
 }
@@ -85,7 +165,13 @@ var x = array.length;
 for( i=0; i&lt;x; i++ ){
   {...}
 }
-</code></pre>
+</code></pre><h2>jQuery</h2><p>jQuery is a powerful library that makes performing DOM manipulation much easier. But like all powerful things, it must be checked.</p>
+<h3>Objects</h3><p>If a jQuery object is to be used multiple times, it should be declared as a variable, to cut down on both redundant objects and use of the $() function. Example:</p>
+<pre><code>var header = $( &#39;.header&#39; ),
+    headerHeight = header.height();
+</code></pre><p>Some people like to preface variables that are jQuery objects with a $ (e.g. $header) and this is fine but not required.</p>
+<h3>Selectors</h3><p>Selectors should be as concise as possible
+jQuery selectors should be as concise as possible. Each additional sele</p>
 
         </main>
       </div>
@@ -99,5 +185,8 @@ for( i=0; i&lt;x; i++ ){
         </div>
       </div>
     </footer>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>
