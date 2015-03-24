@@ -1,3 +1,4 @@
+<!---
 Table of Contents
 
 * Introduction
@@ -47,14 +48,13 @@ Table of Contents
 In progress...
 
 ***
-
-**Introduction**
+-->
 
 Cuberis projects use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at [lesscss.org](http://lesscss.org).
 
 Projects in vanilla CSS or other pre-processors such as Sass are also supported, if necessary.
 
-Cuberis' CSS standards are heavily influenced by (**but differ from**) [Harry Roberts' CSS guidelines](http://cssguidelin.es/).
+Cuberis' CSS standards are influenced by (**but differ from**) [Harry Roberts' CSS guidelines](http://cssguidelin.es/).
 
 ## Rulesets
 
@@ -110,9 +110,8 @@ Additionally, properties should ideally be ordered as follows (some properties o
 6. 
 -->
 
-### Basic Selectors
+### Selectors
 
-There are six types of selectors: **element selectors**, **IDs***, **classes**, **attribute selectors**, **pseudo-class** and **pseudo-elements**.
 
 #### ID Selectors
 
@@ -149,25 +148,31 @@ Refer to the [components section](#) below for additional guidelines on class us
 	selector::after {...}
 1. Pseudo-elements should be delimited by **two** colons
 
-#### Compound Selectors
+#### Other Types of Selectors
 
-Compound selectors are selectors comprised of more than one chained selector. Selectors should be ordered by type, in the following sequence: element selectors, IDs*, classes, attribute selectors, pseudo-class and pseudo-elements.
+Cuberis follows the W3C terminology when discussing other selectors such as child selectors, adjacent sibling selectors, decendent selectors, etc. Refer to the [W3C working spec](http://www.w3.org/TR/2009/PR-css3-selectors-20091215/) for more information. 
 
-Examples of **incorrectly** combined compound selectors:
+### Selector Performance
 
-	.navigation#main-navigation {...}
-	[data-name].orange {...}
+CSS is evaluated from **right to left**. The renderer starts with the rightmost simple selector and loops through the document tree looking for matches. The renderer then moves to the second rightmost simple selector and seeks to narrow the set of matched elements. Because the first loop is alway of broadest scope (the entire document tree), the more specific the rightmost selector is, the more performant the CSS.
 
-Examples of **correctly** combined compound selectors:
+The rightmost simple selector in a selector chain is referred to as the **key selector**
 
-	p.footnote.teal {...}
-	.person:nth-child(odd)::after {...}
+	.main-content aside a {...}
 
-_*See section above regarding usage of IDs in Cuberis stylesheets_
+The anchor tag type selector is the key selector in the above selector chain. By adding and using a unique class to the anchors being targeting, this CSS becomes many times more perfomant, especially in documents with larger document trees.
 
-#### Selector Performance
+	.main-content aside .specific-class {...} 
 
-CSS is evaluated from **right to left**, meaning that with a selector
+If the class is specific enough to not need the ancestor qualifiers, it can be simply written as:
+
+	.specific-class {...}
+
+This reduces the number of times the renderer needs to loop through all or part of the document tree, increasing performance further.
+
+#### Performance Tradeoff
+
+While producing the most performant CSS is the goal, any potential performance increasing practices that could negatively affect the semanticism, readibility, extensibility or maintainability of code should be researched and carefully weighed before being adopted.
 
 ## Components
 There are three main types of classes—component classes, element classes and modifier classes.
