@@ -1,3 +1,14 @@
+
+### Getting Started
+
+Cuberis generally uses 2 environments for development of projects. Harp.js for Static sites and templates and Vagrant for PHP environments.
+
+We use the [Varying Vagrant](https://github.com/Varying-Vagrant-Vagrants/VVV) to build PHP projects as a shareable, stable and self containted environment. The documentation on the [Varying Vagrant](https://github.com/Varying-Vagrant-Vagrants/VVV) provides an excellent primer on both [Vagrant](https://www.vagrantup.com/) as well as building projects with in the environment.
+
+We typically use [Harp.js](http://harpjs.com/) when working on static sites or crafting initial templates for its speed and easy of use. Projects are self contained and easy to share within the team via GitHub.
+
+While these tools are prefered Cuberis works to continually evaluate the best tool for internal projects as well as project needs.
+
 Any new or maintenance project gets a GitHub repo for code storage and management. If the client has both a production and maintenance server DeployHQ is set to use the Staging branch for the development server and the master branch for production. This provides a project with a consolidated and readable history and is part of our deployment process.
 
 To create a new repository a Development Team Member will log into Github and with in the Cuberis account create a new repository.

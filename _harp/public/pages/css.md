@@ -21,7 +21,7 @@ Table of Contents
 		* ID Naming Conventions
 			* _'#js-...'_
 		* Class Naming Conventions
-			* 
+			*
 * Organization
 	* Table of Contents
 	* Comments
@@ -50,9 +50,11 @@ In progress...
 
 **Introduction**
 
-Cuberis projects use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at [lesscss.org](http://lesscss.org).
+Cuberis projects typically use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at [lesscss.org](http://lesscss.org).
 
 Projects in vanilla CSS or other pre-processors such as Sass are also supported, if necessary.
+
+Documentation for SASS can be found at http://sass-lang.com/
 
 Cuberis' CSS standards are heavily influenced by (**but differ from**) [Harry Roberts' CSS guidelines](http://cssguidelin.es/).
 
@@ -107,7 +109,7 @@ Additionally, properties should ideally be ordered as follows (some properties o
 	2. left
 	3. right
 	3. bottom
-6. 
+6.
 -->
 
 ### Basic Selectors
@@ -247,7 +249,7 @@ Here's an example of what a \_globals file named \_buttons.less might look like.
 		}
 		&.square {
 			border-radius: 0;
-		}	
+		}
 		&.extra-padding {
 			padding: 1.5em 3em;
 		}
@@ -265,7 +267,7 @@ and this is our \product.less file:
 		.btn.red.extra-padding();
 	}
 
-Our app.less file then looks something like this: 
+Our app.less file then looks something like this:
 
 	@import("globals/buttons.less");
 	@import("components/person.less");
@@ -282,5 +284,3 @@ The only time that nested selectors should be used is with LESS' & operator. Thi
 There shall be no instances of double-hyphenation in class names.
 
 -->
-
-
