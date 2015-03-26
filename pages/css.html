@@ -17,7 +17,7 @@
           <h3>Table of Contents</h3>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/standards/">Home</a>
             </li>
           
             <li>
@@ -52,87 +52,62 @@
             <h1>CSS</h1>
           
 
-          <p>Table of Contents</p>
-<ul>
-<li>Introduction</li>
-<li>LESS as a Framework<ul>
-<li><em>explanation</em></li>
-<li><em>also support SASS and vanilla CSS if necessary</em></li>
-</ul>
-</li>
-<li>Basics<ul>
-<li>Ruleset Guidelines<ul>
-<li>Basic Syntax<ul>
-<li><em>opening brace on same line as selector</em></li>
-<li><em>one space before opening brace</em></li>
-<li><em>properties and values on the same line</em></li>
-<li><em>one space after colon that follows property name</em></li>
-<li><em>each property/value declaration on its own line</em></li>
-<li><em>each property/value declaration indented</em></li>
-<li><em>closing brace on its own line</em></li>
-</ul>
-</li>
-<li>Supplemental Syntax<ul>
-<li><em>in rulesets with multiple selectors, each selector on its own line</em></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Classes and IDs<ul>
-<li><em>IDs reserved for JS selectors</em></li>
-<li>ID Naming Conventions<ul>
-<li><em>&#39;#js-...&#39;</em></li>
-</ul>
-</li>
-<li>Class Naming Conventions
-  *</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Organization<ul>
-<li>Table of Contents</li>
-<li>Comments<ul>
-<li>Sectioning Comments</li>
-<li>Descriptive Comments</li>
-</ul>
-</li>
-<li>Meaningful Whitespace<ul>
-<li>Between Rulesets</li>
-<li>Delimiting Sections</li>
-<li>Aligning Values of Related Declarations (Optional)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>File Structure<ul>
-<li>Overview<ul>
-<li><em>app</em></li>
-<li><em>normalize</em></li>
-<li><em>tools</em></li>
-<li><em>globals</em></li>
-<li><em>components</em></li>
-</ul>
-</li>
-<li>App<ul>
-<li><em>table of contents, comments, and imports only&mdash;no rulesets</em></li>
-</ul>
-</li>
-<li>Normalize<ul>
-<li><em>required</em></li>
-<li><em>imported first</em></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>In progress...</p>
-<hr>
-<p><strong>Introduction</strong></p>
-<p>Cuberis projects typically use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at <a href="http://lesscss.org">lesscss.org</a>.</p>
+          <!--
+
+Table of Contents
+
+* Introduction
+* LESS as a Framework
+    * _explanation_
+    * _also support SASS and vanilla CSS if necessary_
+* Basics
+    * Ruleset Guidelines
+        * Basic Syntax
+            * _opening brace on same line as selector_
+            * _one space before opening brace_
+            * _properties and values on the same line_
+            * _one space after colon that follows property name_
+            * _each property/value declaration on its own line_
+            * _each property/value declaration indented_
+            * _closing brace on its own line_
+        * Supplemental Syntax
+            * _in rulesets with multiple selectors, each selector on its own line_
+    * Classes and IDs
+        * _IDs reserved for JS selectors_
+        * ID Naming Conventions
+            * _'#js-...'_
+        * Class Naming Conventions
+            *
+* Organization
+    * Table of Contents
+    * Comments
+        * Sectioning Comments
+        * Descriptive Comments
+    * Meaningful Whitespace
+        * Between Rulesets
+        * Delimiting Sections
+        * Aligning Values of Related Declarations (Optional)
+* File Structure
+    * Overview
+        * _app_
+        * _normalize_
+        * _tools_
+        * _globals_
+        * _components_
+    * App
+        * _table of contents, comments, and imports only&mdash;no rulesets_
+    * Normalize
+        * _required_
+        * _imported first_
+
+In progress...
+
+-->
+<h3>Introduction</h3><p>Cuberis projects typically use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at <a href="http://lesscss.org">lesscss.org</a>.</p>
 <p>Projects in vanilla CSS or other pre-processors such as Sass are also supported, if necessary.</p>
 <p>Documentation for SASS can be found at <a href="http://sass-lang.com/">http://sass-lang.com/</a></p>
 <p>Cuberis&#39; CSS standards are heavily influenced by (<strong>but differ from</strong>) <a href="http://cssguidelin.es/">Harry Roberts&#39; CSS guidelines</a>.</p>
+<p>The most common framework in Cuberis projects is Bootstrap, however, the is history and experience using foundation.</p>
 <h2>Rulesets</h2><p>The following terminology when discussing CSS rulesets is used at Cuberis:</p>
 <pre><code>[selector] {
     [property]: [value];
@@ -209,6 +184,21 @@ Additionally, properties should ideally be ordered as follows (some properties o
 </code></pre><p>Examples of <strong>correctly</strong> combined compound selectors:</p>
 <pre><code>p.footnote.teal {...}
 .person:nth-child(odd)::after {...}
+</code></pre><p>In Less Syntax</p>
+<pre><code>p{
+    &amp;.footnote{
+        &amp;.teal{
+            ...
+        }
+    }
+}
+.person{
+    &amp;:nth-child(odd){
+        &amp;::after {
+            ...
+        }
+    }
+}
 </code></pre><p><em>*See section above regarding usage of IDs in Cuberis stylesheets</em></p>
 <h4>Selector Performance</h4><p>CSS is evaluated from <strong>right to left</strong>, meaning that with a selector</p>
 <h2>Components</h2><p>There are three main types of classes—component classes, element classes and modifier classes.</p>
@@ -247,69 +237,48 @@ Additionally, properties should ideally be ordered as follows (some properties o
     [...]
 
 &lt;/section&gt;
-</code></pre><!---
+</code></pre><h2>app.less and what it means for <em>you</em></h2><p>Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
+<p>Your LESS directory should be broken into three distinct parts: globals, components, and app.less itself. Globals should contain code written in the most abstract, reusable way possible and be written with language that denotes their visual appearance. Think of globals as your block level elements--buttons, forms, type, etc. Globals should be the only place where explicit CSS is written.</p>
+<p>Components should integrate globals as mixins, and be written with language that denotes their &quot;purpose&quot; on the page. Think of components as &quot;sections&quot; or &quot;parts&quot; of a website.</p>
+<p>App.less contains nothing but import statements that compile your components and globals.</p>
+<p>Here&#39;s an example of what a _globals file named _buttons.less might look like. Note that modifiers are as descriptive as possible. (Also note the parantheses with .btn, which prevents it from being output to the compiled CSS file. )</p>
+<pre><code>.btn() {
+    border-radius: 4px;
+    padding: 1em 2em;
+    background: @grey;
 
-##app.less and what it means for _you_
-
-Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.
-
-Your LESS directory should be broken into three distinct parts: globals, components, and app.less itself. Globals should contain code written in the most abstract, reusable way possible and be written with language that denotes their visual appearance. Think of globals as your block level elements--buttons, forms, type, etc. Globals should be the only place where explicit CSS is written.
-
-Components should integrate globals as mixins, and be written with language that denotes their "purpose" on the page. Think of components as "sections" or "parts" of a website.
-
-App.less contains nothing but import statements that compile your components and globals.
-
-(Also I should at some point mention we use LESS, not SASS. Deal with it.)
-
-Here's an example of what a \_globals file named \_buttons.less might look like. Note that modifiers are as descriptive as possible. (Also note the parantheses with .btn, which prevents it from being output to the compiled CSS file. )
-
-    .btn() {
-        border-radius: 4px;
-        padding: 1em 2em;
-        background: @grey;
-
-        &.green {
-            background: @green;
-        }
-        &.red {
-            background: @red;
-        }
-        &.square {
-            border-radius: 0;
-        }
-        &.extra-padding {
-            padding: 1.5em 3em;
-        }
+    &amp;.green {
+        background: @green;
     }
-
-This would then be used as a mixin within our \_components files. Let's say we have a button associated with a person and a button associated with a product. The person button is green and square, the product button is red and has extra padding. This is our \_person.less file:
-
-    .person .btn {
-        .btn.green.square();
+    &amp;.red {
+        background: @red;
     }
-
-and this is our \product.less file:
-
-    .product .btn {
-        .btn.red.extra-padding();
+    &amp;.square {
+        border-radius: 0;
     }
-
-Our app.less file then looks something like this:
-
-    @import("globals/buttons.less");
-    @import("components/person.less");
-    @import("components/product.less");
-
-This system allows for an element's display characteristics to maintain a separation between *what* it is and *how* it looks on a page. This in turn allows for maximum reusability of code because form and function are distinct.
-
+    &amp;.extra-padding {
+        padding: 1.5em 3em;
+    }
+}
+</code></pre><p>This would then be used as a mixin within our _components files. Let&#39;s say we have a button associated with a person and a button associated with a product. The person button is green and square, the product button is red and has extra padding. This is our _person.less file:</p>
+<pre><code>.person .btn {
+    .btn.green.square();
+}
+</code></pre><p>and this is our \product.less file:</p>
+<pre><code>.product .btn {
+    .btn.red.extra-padding();
+}
+</code></pre><p>Our app.less file then looks something like this:</p>
+<pre><code>@import(&quot;dependencies/...&quot;);
+@import(&quot;globals/buttons.less&quot;);
+@import(&quot;components/person.less&quot;);
+@import(&quot;components/product.less&quot;);
+@import(&quot;components/home.less&quot;);
+</code></pre><p>This system allows for an element&#39;s display characteristics to maintain a separation between <em>what</em> it is and <em>how</em> it looks on a page. This in turn allows for maximum reusability of code because form and function are distinct.</p>
+<!--
 ##Nesting
 
 The only time that nested selectors should be used is with LESS' & operator. This is useful for making modifiers children of their more general counterparts, which keeps "sibling" styles grouped together for maximum legibility and order. This may also be useful for pseudoelements (i.e. :before and :after).
-
-##Hyphenation
-
-There shall be no instances of double-hyphenation in class names.
-
 -->
 
         </main>
