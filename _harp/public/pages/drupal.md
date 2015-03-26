@@ -4,19 +4,17 @@ Cuberis often uses WordPress to create client sites and develops custom function
 
 Download the version of Drupal you need and install on your local development environment.
 
-OR
+https://www.drupal.org/project/drupal
+
+**-OR-**
 
 Set up a local environment using VDD and install Drupal using Drush.
 
-### Install a module base for your project.
-
-Create folders inside sites/all/modules and name them 'contrib' and 'custom'. This structure will be used to separate community modules from those you have built or customized yourself.
-
-Add the base modules you require for your project.
+https://www.drupal.org/node/2008792
 
 ### Modules
 
-A list of approved modules for Cuberis Drupal development. Implement only those needed for your project.
+Create folders inside sites/all/modules and name them 'contrib' and 'custom'. This structure will be used to separate community modules from those you have built or customized yourself.
 
 * **Administration Menu** - A better admin menu with dropdowns.
 https://www.drupal.org/project/admin_menu
