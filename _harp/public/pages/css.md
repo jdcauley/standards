@@ -1,3 +1,5 @@
+<!--
+
 Table of Contents
 
 * Introduction
@@ -46,9 +48,9 @@ Table of Contents
 
 In progress...
 
-***
+-->
 
-**Introduction**
+### Introduction
 
 Cuberis projects typically use Less for CSS pre-processing. Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that make CSS more maintainable, themable and extendable. Documentation on Less is available at [lesscss.org](http://lesscss.org).
 
@@ -57,6 +59,8 @@ Projects in vanilla CSS or other pre-processors such as Sass are also supported,
 Documentation for SASS can be found at http://sass-lang.com/
 
 Cuberis' CSS standards are heavily influenced by (**but differ from**) [Harry Roberts' CSS guidelines](http://cssguidelin.es/).
+
+The most common framework in Cuberis projects is Bootstrap, however, the is history and experience using foundation.
 
 ## Rulesets
 
@@ -165,6 +169,23 @@ Examples of **correctly** combined compound selectors:
 	p.footnote.teal {...}
 	.person:nth-child(odd)::after {...}
 
+In Less Syntax
+
+	p{
+		&.footnote{
+			&.teal{
+				...
+			}
+		}
+	}
+	.person{
+		&:nth-child(odd){
+			&::after {
+				...
+			}
+		}
+	}
+
 _*See section above regarding usage of IDs in Cuberis stylesheets_
 
 #### Selector Performance
@@ -215,13 +236,6 @@ For instance, a leadership page on an organization's website might feature heads
 
 
 
-
-
-
-
-
-<!---
-
 ##app.less and what it means for _you_
 
 Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.
@@ -231,8 +245,6 @@ Your LESS directory should be broken into three distinct parts: globals, compone
 Components should integrate globals as mixins, and be written with language that denotes their "purpose" on the page. Think of components as "sections" or "parts" of a website.
 
 App.less contains nothing but import statements that compile your components and globals.
-
-(Also I should at some point mention we use LESS, not SASS. Deal with it.)
 
 Here's an example of what a \_globals file named \_buttons.less might look like. Note that modifiers are as descriptive as possible. (Also note the parantheses with .btn, which prevents it from being output to the compiled CSS file. )
 
@@ -269,18 +281,16 @@ and this is our \product.less file:
 
 Our app.less file then looks something like this:
 
+	@import("dependencies/...");
 	@import("globals/buttons.less");
 	@import("components/person.less");
 	@import("components/product.less");
+	@import("components/home.less");
 
 This system allows for an element's display characteristics to maintain a separation between *what* it is and *how* it looks on a page. This in turn allows for maximum reusability of code because form and function are distinct.
 
+<!--
 ##Nesting
 
 The only time that nested selectors should be used is with LESS' & operator. This is useful for making modifiers children of their more general counterparts, which keeps "sibling" styles grouped together for maximum legibility and order. This may also be useful for pseudoelements (i.e. :before and :after).
-
-##Hyphenation
-
-There shall be no instances of double-hyphenation in class names.
-
 -->
