@@ -1,3 +1,4 @@
+<!--
 ##Table of Contents
 
 * General Principles
@@ -6,7 +7,7 @@
     * White space
         * Line Breaks
         * Parentheses
-    * 
+    *
 * Variables
     * Naming
         * Booleans
@@ -16,7 +17,7 @@
 * For Loops
 * jQuery
 
-***
+-->
 
 ##General Principles
 
@@ -37,21 +38,28 @@ Our preferred use of white space
 
 Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:
 
-    function function1(){
-        ...
-        ...
-        ...
+    function nameOfFunctionOne(){
+
+      var thisThing = 'a string thing';
+
+      ...
+      ...
+      ...
+
     }
 
-    function function2(){
-        ...
-        ...
-        ...
+    function nameOfFunctionTwo(){
+
+      ...
+      ...
+      ...
+
     }
 
 This is wrong:
 
-    function function1(){
+    function nameOfFunctionOne(){
+      var thisThing = 'a string thing';
         ...
 
         ...
@@ -59,7 +67,8 @@ This is wrong:
         ...
         ...
     }
-    function function2(){
+    function nameOfFunctionTwo(){
+      var thisThing = 'a string thing';
         ...
     }
 
@@ -70,12 +79,12 @@ Our preferred style of spacing for statements inside of parentheses is to have a
 This is correct:
 
     function( param1, param2 ){
-        if( boolean ){
-            ...
-        }
+      if( boolean ){
+        ...
+      }
     }
 
-This is wrong: 
+This is wrong:
 
     function(param1){
         if(boolean){
@@ -111,7 +120,7 @@ This is wrong:
 
 ###Naming
 
-Variables should be camel-cased and descriptively named.   
+Variables should be camel-cased and descriptively named.
 
 ###Declarations
 
@@ -143,9 +152,11 @@ but this isn't:
 
     correctName = false;
 
-###Single-letter variables
+###Variable Nomeclature
 
-Single-letter variables should be avoided in any case except for instantiating a for loop.
+Cuberis uses a variety of tools to minify and concatenate JavaScript. The result is that all variable names will be replaced with single characters in production.
+
+This provides an advantage in that we can be very clear about function and variable names when writing JavaScript. For this reason single-letter variables should be reserved for writing loops.
 
 ##Loops
 
@@ -184,4 +195,4 @@ Some people like to preface variables that are jQuery objects with a $ (e.g. $he
 ###Selectors
 
 Selectors should be as concise as possible
-jQuery selectors should be as concise as possible. Each additional sele
+jQuery selectors should be as concise as possible. Each additional selector reduces the preformance of your JavaScript, and reduces rendering speed.
