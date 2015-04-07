@@ -62,7 +62,7 @@ Cuberis' CSS standards are heavily influenced by (**but differ from**) [Harry Ro
 
 The most common framework in Cuberis projects is Bootstrap, however, the is history and experience using foundation.
 
-## Rulesets
+### Rulesets
 
 The following terminology when discussing CSS rulesets is used at Cuberis:
 
@@ -188,11 +188,11 @@ In Less Syntax
 
 _*See section above regarding usage of IDs in Cuberis stylesheets_
 
-#### Selector Performance
+### Selector Performance
 
 CSS is evaluated from **right to left**, meaning that with a selector
 
-## Components
+### Components
 There are three main types of classes—component classes, element classes and modifier classes.
 
 **component** and **element classes** can be thought of as nouns, targeting specific elements and groups of elements (respectively) based on what they are—their identity and function.
@@ -236,7 +236,7 @@ For instance, a leadership page on an organization's website might feature heads
 
 
 
-##app.less and what it means for _you_
+###app.less and what it means for _you_
 
 Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.
 
