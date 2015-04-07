@@ -12,29 +12,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<%= base_url %>/assets/css/app.css">
   </head>
   <body class="page-<%- current.path[0] %>">
     <header class="main-header">
 
     </header>
-    <div class="container">
-      <div class="row">
-        <aside class="col-sm-3">
-          <h3>Table of Contents</h3>
-          <ul>
-            <li>
-              <a href="/standards/">Home</a>
-            </li>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <aside class="col-sm-4 col left-col">
+          <nav class="bar-nav">
+            <h3 class="site-title">Standards &amp; Practices</h3>
+            <ul>
+              <li>
+                <a href="/standards/">Home</a>
+              </li>
           <% var pages = public.pages._data;
              for(var k = 0; k < pages.length; k++){ %>
-            <li>
-              <a href="<%= base_url %>/pages/<%= pages[k].slug %>"><%= pages[k].title %></a>
-            </li>
+            <% if(current.source === pages[k].slug){ %>
+              <li class="active">
+                <a href="<%= base_url %>/pages/<%= pages[k].slug %>"><%= pages[k].title %></a>
+              </li>
+            <% } else { %>
+              <li>
+                <a href="<%= base_url %>/pages/<%= pages[k].slug %>"><%= pages[k].title %></a>
+              </li>
+            <% } %>
           <% } %>
-
+            </ul>
+          </nav>
         </aside>
-        <main class="col-sm-9">
+        <main class="col-sm-8 col-sm-offset-4 col right-col">
           <% if(page && page.subnav){ %>
             <%- partial('_partials/subnav', {subnav: page.subnav}) %>
           <% } %>
