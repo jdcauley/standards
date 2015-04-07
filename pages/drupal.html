@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuberis Standards</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
+  </head>
+  <body class="page-pages">
+    <header class="main-header">
+
+    </header>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <aside class="col-sm-4 col left-col">
+          <nav class="bar-nav">
+            <h3 class="site-title">Standards &amp; Practices</h3>
+            <ul>
+              <li>
+                <a href="/standards/">Home</a>
+              </li>
+          
+            
+              <li>
+                <a href="/standards/pages/setup">Project Setup</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/git">GIT and GitHub</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/css">CSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/js">Javascript</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/wp">WordPress</a>
+              </li>
+            
+          
+            
+              <li class="active">
+                <a href="/standards/pages/drupal">Drupal</a>
+              </li>
+            
+          
+            </ul>
+          </nav>
+        </aside>
+        <main class="col-sm-8 col-sm-offset-4 col right-col">
+          
+            
+
+          
+
+          
+            <h1>Drupal</h1>
+          
+
+          <p>Cuberis often uses WordPress to create client sites and develops custom functionality through plugin and them integrations as needed.</p>
+<h3>Local Development</h3><p>Download the version of Drupal you need and install on your local development environment.</p>
+<p><a href="https://www.drupal.org/project/drupal">https://www.drupal.org/project/drupal</a></p>
+<p><strong>-OR-</strong></p>
+<p>Set up a local environment using VDD and install Drupal using Drush.</p>
+<p><a href="https://www.drupal.org/node/2008792">https://www.drupal.org/node/2008792</a></p>
+<h3>Modules</h3><p>Create folders inside sites/all/modules and name them &#39;contrib&#39; and &#39;custom&#39;. This structure will be used to separate community modules from those you have built or customized yourself.</p>
+<ul>
+<li><p><strong>Administration Menu</strong> - A better admin menu with dropdowns.
+<a href="https://www.drupal.org/project/admin_menu">https://www.drupal.org/project/admin_menu</a></p>
+</li>
+<li><p><strong>Backup and Migrate</strong> - Backup scheduling and database export.
+<a href="https://www.drupal.org/project/backup_migrate">https://www.drupal.org/project/backup_migrate</a></p>
+</li>
+<li><p><strong>Colorbox</strong> - A lightbox plugin using jQuery. Integrates with entities and views.
+<a href="https://www.drupal.org/project/colorbox">https://www.drupal.org/project/colorbox</a></p>
+</li>
+<li><p><strong>Context</strong> - Manage contextual conditions for content display.
+<a href="https://www.drupal.org/project/context">https://www.drupal.org/project/context</a></p>
+</li>
+<li><p><strong>Date</strong> - Package containing date/time field type and a date api that other modules can use.
+<a href="https://www.drupal.org/project/date">https://www.drupal.org/project/date</a></p>
+</li>
+<li><p><strong>Devel</strong> - 
+Print database summaries for debugging.
+<a href="https://www.drupal.org/project/devel">https://www.drupal.org/project/devel</a></p>
+</li>
+<li><p><strong>Entity API</strong> - 
+Extends the entity API of Drupal core.
+<a href="https://www.drupal.org/project/entity">https://www.drupal.org/project/entity</a></p>
+</li>
+<li><p><strong>Entity View Modes</strong> - 
+Allows admins to define custom view modes for entities. Ensures consistency for template suggestions relating to entity types.
+<a href="https://www.drupal.org/project/entity_view_mode">https://www.drupal.org/project/entity_view_mode</a></p>
+</li>
+<li><p><strong>Entity Reference</strong> - 
+A generic reference field for entities.
+<a href="https://www.drupal.org/project/entityreference">https://www.drupal.org/project/entityreference</a></p>
+</li>
+<li><p><strong>Features</strong> - 
+Provides capture and management of entity collections. Provides UI and API for bundling components from modules in a single feature module.
+<a href="https://www.drupal.org/project/features">https://www.drupal.org/project/features</a></p>
+</li>
+<li><p><strong>Feeds</strong> - 
+Import or aggregate data as nodes, users, taxonomy terms or database records.
+<a href="https://www.drupal.org/project/feeds">https://www.drupal.org/project/feeds</a></p>
+</li>
+<li><p><strong>Feeds Tamper</strong> - 
+Provides plugin architecture to modify Feeds data before it gets
+<a href="https://www.drupal.org/project/feeds_tamper">https://www.drupal.org/project/feeds_tamper</a></p>
+</li>
+<li><p><strong>Feeds XPath Parser</strong> - 
+Feeds plugin for parsing XML and HTML documents.
+<a href="https://www.drupal.org/project/feeds_xpathparser">https://www.drupal.org/project/feeds_xpathparser</a></p>
+</li>
+<li><p><strong>Field Collection</strong> - 
+Allows for creating collection fields, to which any number of fields can be attached.
+<a href="https://www.drupal.org/project/field_collection">https://www.drupal.org/project/field_collection</a></p>
+</li>
+<li><p><strong>Field Group</strong> - 
+Groups fields together in tabs, accordions, or div wrappers.
+<a href="https://www.drupal.org/project/field_group">https://www.drupal.org/project/field_group</a></p>
+</li>
+<li><p><strong>File Entity</strong> - 
+Provide an interface for managing files.
+<a href="https://www.drupal.org/project/file_entity">https://www.drupal.org/project/file_entity</a></p>
+</li>
+<li><p><strong>FileField Sources</strong> - 
+Extends the File field to allow file uploads.
+<a href="https://www.drupal.org/project/filefield_sources">https://www.drupal.org/project/filefield_sources</a></p>
+</li>
+<li><p><strong>Flag</strong> - 
+Creates a flexible flagging system to mark any type of entity. Can be used with views to create lists of popular content.
+<a href="https://www.drupal.org/project/flag">https://www.drupal.org/project/flag</a></p>
+</li>
+<li><p><strong>Geofield</strong> - 
+Stores geographical data.
+<a href="https://www.drupal.org/project/geofield">https://www.drupal.org/project/geofield</a></p>
+</li>
+<li><p><strong>Google Analytics</strong> - 
+Integrates with the web statistics tracking system.
+<a href="https://www.drupal.org/project/google_analytics">https://www.drupal.org/project/google_analytics</a></p>
+</li>
+<li><p><strong>Honeypot</strong> - 
+Uses honeypot and timestamp methods of deterring spam without CAPTCHA.
+<a href="https://www.drupal.org/project/honeypot">https://www.drupal.org/project/honeypot</a></p>
+</li>
+<li><p><strong>ImageCache Token</strong> - 
+Provides additional tokens for image fields.
+<a href="https://www.drupal.org/project/imagecache_token">https://www.drupal.org/project/imagecache_token</a></p>
+</li>
+<li><p><strong>Job Scheduler</strong> - 
+API for task scheduling.
+<a href="https://www.drupal.org/project/job_scheduler">https://www.drupal.org/project/job_scheduler</a></p>
+</li>
+<li><p><strong>jQuery Update</strong> - 
+Upgrades the version of jQuery.
+<a href="https://www.drupal.org/project/jquery_update">https://www.drupal.org/project/jquery_update</a></p>
+</li>
+<li><p><strong>Libraries</strong> - 
+Common denominator for all Drupal modules to integrate with external libraries.
+<a href="https://www.drupal.org/project/libraries">https://www.drupal.org/project/libraries</a></p>
+</li>
+<li><p><strong>Link</strong> - 
+Advanced validating and different ways of storing internal or external links and URLs.</p>
+</li>
+<li><p><strong>Media</strong> - 
+Provides a framework for managing files and multimedia assets.
+<a href="https://www.drupal.org/project/media">https://www.drupal.org/project/media</a></p>
+</li>
+<li><p><strong>Menu Block</strong> - 
+Expand control over Drupal core menu system.
+<a href="https://www.drupal.org/project/menu_block">https://www.drupal.org/project/menu_block</a></p>
+</li>
+<li><p><strong>Menu Breadcrumb</strong> - 
+Allows for using the current page as a breadcrumb.
+<a href="https://www.drupal.org/project/menu_breadcrumb">https://www.drupal.org/project/menu_breadcrumb</a></p>
+</li>
+<li><p><strong>Menu Editor</strong> - 
+Enhances menu editing.
+<a href="https://www.drupal.org/project/menu_breadcrumb">https://www.drupal.org/project/menu_breadcrumb</a></p>
+</li>
+<li><p><strong>Metatag</strong> - 
+Automatically provide structured meta data.
+<a href="https://www.drupal.org/project/metatag">https://www.drupal.org/project/metatag</a></p>
+</li>
+<li><p><strong>Modernizr</strong> - 
+Tests the native features available in each browser and makes them available as classes on html elements and as properties on a global object.
+<a href="https://www.drupal.org/project/modernizr">https://www.drupal.org/project/modernizr</a></p>
+</li>
+<li><p><strong>Module Filter</strong> - 
+Enhances module management UI.
+<a href="https://www.drupal.org/project/module_filter">https://www.drupal.org/project/module_filter</a></p>
+</li>
+<li><p><strong>Pathauto</strong> - 
+Automatically generates URL/path aliases for content.
+<a href="https://www.drupal.org/project/pathauto">https://www.drupal.org/project/pathauto</a></p>
+</li>
+<li><p><strong>Redirect 403 to User Login</strong> - 
+Redirect 403 error pages to user login with optional access denied message.
+<a href="https://www.drupal.org/project/r4032login">https://www.drupal.org/project/r4032login</a></p>
+</li>
+<li><p><strong>Redirect</strong> - 
+Path and global redirects.
+<a href="https://www.drupal.org/project/redirect">https://www.drupal.org/project/redirect</a></p>
+</li>
+<li><p><strong>Respond.js</strong> - 
+Provides IE 6-8 support for responsive themes.
+<a href="https://www.drupal.org/project/respondjs">https://www.drupal.org/project/respondjs</a></p>
+</li>
+<li><p><strong>Rules</strong> - 
+Defines conditionally executed actions based on occurring events. Replaces trigger module in core.
+<a href="https://www.drupal.org/project/rules">https://www.drupal.org/project/rules</a></p>
+</li>
+<li><p><strong>Search API</strong> - 
+Framework for creating searches on any entity using any search engine.
+<a href="https://www.drupal.org/project/search_api">https://www.drupal.org/project/search_api</a></p>
+</li>
+<li><p><strong>Services</strong> - 
+Standardized solution for integrating external applications with Drupal.
+<a href="https://www.drupal.org/project/services">https://www.drupal.org/project/services</a></p>
+</li>
+<li><p><strong>Shibboleth Authentication</strong> - 
+Provide user authentication with shibboleth.
+<a href="https://www.drupal.org/project/shib_auth">https://www.drupal.org/project/shib_auth</a></p>
+</li>
+<li><p><strong>Smart Trim</strong> - 
+Implements new field formatter for textfields.
+<a href="https://www.drupal.org/project/smart_trim">https://www.drupal.org/project/smart_trim</a></p>
+</li>
+<li><p><strong>Strongarm</strong> - 
+Provides a way to override default variables in Drupal core.
+<a href="https://www.drupal.org/project/strongarm">https://www.drupal.org/project/strongarm</a></p>
+</li>
+<li><p><strong>Token</strong> - 
+API for modules to use tokens and expose values.
+<a href="https://www.drupal.org/project/token">https://www.drupal.org/project/token</a></p>
+</li>
+<li><p><strong>Transliteration</strong> - 
+Replaces unwanted characters in file names for uploads.
+<a href="https://www.drupal.org/project/transliteration">https://www.drupal.org/project/transliteration</a></p>
+</li>
+<li><p><strong>Vertical Tabs Responsive</strong> - 
+Add responsive vertical tabs to admin pages.
+<a href="https://www.drupal.org/project/vertical_tabs_responsive">https://www.drupal.org/project/vertical_tabs_responsive</a></p>
+</li>
+<li><p><strong>Views</strong> - 
+You better know what these do.
+<a href="https://www.drupal.org/project/views">https://www.drupal.org/project/views</a></p>
+</li>
+<li><p><strong>Views Bulk Operations (VBO)</strong> - 
+Augments Views by allowing bulk operations to be executed on rows.
+<a href="https://www.drupal.org/project/views_bulk_operations">https://www.drupal.org/project/views_bulk_operations</a></p>
+</li>
+<li><p><strong>Webform</strong> - 
+Creates surveys.
+<a href="https://www.drupal.org/project/webform">https://www.drupal.org/project/webform</a></p>
+</li>
+<li><p><strong>Workbench</strong> - 
+Improvements for managing content and workflow.
+<a href="https://www.drupal.org/project/workbench">https://www.drupal.org/project/workbench</a></p>
+</li>
+<li><p><strong>Workbench Access</strong> - 
+Creates editorial access controls based on heirarchies.
+<a href="https://www.drupal.org/project/workbench_access">https://www.drupal.org/project/workbench_access</a></p>
+</li>
+<li><p><strong>Workbench Moderation</strong> - 
+Add moderation states to node states.
+<a href="https://www.drupal.org/project/workbench_moderation">https://www.drupal.org/project/workbench_moderation</a></p>
+</li>
+<li><p><strong>Wysiwyg</strong> - 
+Visual editor.
+<a href="https://www.drupal.org/project/wysiwyg">https://www.drupal.org/project/wysiwyg</a></p>
+</li>
+<li><p><strong>X Autoload</strong> - 
+PHP class loading suite.
+<a href="https://www.drupal.org/project/xautoload">https://www.drupal.org/project/xautoload</a></p>
+</li>
+<li><p><strong>XML Sitemap</strong> - 
+Creates a sitemap according to sitemaps.org specifications.
+<a href="https://www.drupal.org/project/xmlsitemap">https://www.drupal.org/project/xmlsitemap</a></p>
+</li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  </body>
+</html>

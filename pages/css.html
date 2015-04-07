@@ -5,44 +5,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
     <header class="main-header">
 
     </header>
-    <div class="container">
-      <div class="row">
-        <aside class="col-sm-3">
-          <h3>Table of Contents</h3>
-          <ul>
-            <li>
-              <a href="/standards/">Home</a>
-            </li>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <aside class="col-sm-4 col left-col">
+          <nav class="bar-nav">
+            <h3 class="site-title">Standards &amp; Practices</h3>
+            <ul>
+              <li>
+                <a href="/standards/">Home</a>
+              </li>
           
-            <li>
-              <a href="/standards/pages/setup">Project Setup</a>
-            </li>
+            
+              <li>
+                <a href="/standards/pages/setup">Project Setup</a>
+              </li>
+            
           
-            <li>
-              <a href="/standards/pages/git">GIT and GitHub</a>
-            </li>
+            
+              <li>
+                <a href="/standards/pages/git">GIT and GitHub</a>
+              </li>
+            
           
-            <li>
-              <a href="/standards/pages/css">CSS</a>
-            </li>
+            
+              <li class="active">
+                <a href="/standards/pages/css">CSS</a>
+              </li>
+            
           
-            <li>
-              <a href="/standards/pages/js">Javascript</a>
-            </li>
+            
+              <li>
+                <a href="/standards/pages/js">Javascript</a>
+              </li>
+            
           
-            <li>
-              <a href="/standards/pages/wp">WordPress</a>
-            </li>
+            
+              <li>
+                <a href="/standards/pages/wp">WordPress</a>
+              </li>
+            
           
-
+            
+              <li>
+                <a href="/standards/pages/drupal">Drupal</a>
+              </li>
+            
+          
+            </ul>
+          </nav>
         </aside>
-        <main class="col-sm-9">
+        <main class="col-sm-8 col-sm-offset-4 col right-col">
           
             
 
@@ -108,7 +128,7 @@ In progress...
 <p>Documentation for SASS can be found at <a href="http://sass-lang.com/">http://sass-lang.com/</a></p>
 <p>Cuberis&#39; CSS standards are heavily influenced by (<strong>but differ from</strong>) <a href="http://cssguidelin.es/">Harry Roberts&#39; CSS guidelines</a>.</p>
 <p>The most common framework in Cuberis projects is Bootstrap, however, the is history and experience using foundation.</p>
-<h2>Rulesets</h2><p>The following terminology when discussing CSS rulesets is used at Cuberis:</p>
+<h3>Rulesets</h3><p>The following terminology when discussing CSS rulesets is used at Cuberis:</p>
 <pre><code>[selector] {
     [property]: [value];
 }
@@ -200,8 +220,8 @@ Additionally, properties should ideally be ordered as follows (some properties o
     }
 }
 </code></pre><p><em>*See section above regarding usage of IDs in Cuberis stylesheets</em></p>
-<h4>Selector Performance</h4><p>CSS is evaluated from <strong>right to left</strong>, meaning that with a selector</p>
-<h2>Components</h2><p>There are three main types of classes—component classes, element classes and modifier classes.</p>
+<h3>Selector Performance</h3><p>CSS is evaluated from <strong>right to left</strong>, meaning that with a selector</p>
+<h3>Components</h3><p>There are three main types of classes—component classes, element classes and modifier classes.</p>
 <p><strong>component</strong> and <strong>element classes</strong> can be thought of as nouns, targeting specific elements and groups of elements (respectively) based on what they are—their identity and function.</p>
 <p>For instance, a leadership page on an organization&#39;s website might feature headshots and titles of their leadership:</p>
 <pre><code>&lt;section&gt;
@@ -237,7 +257,7 @@ Additionally, properties should ideally be ordered as follows (some properties o
     [...]
 
 &lt;/section&gt;
-</code></pre><h2>app.less and what it means for <em>you</em></h2><p>Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
+</code></pre><h3>app.less and what it means for <em>you</em></h3><p>Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
 <p>Your LESS directory should be broken into three distinct parts: globals, components, and app.less itself. Globals should contain code written in the most abstract, reusable way possible and be written with language that denotes their visual appearance. Think of globals as your block level elements--buttons, forms, type, etc. Globals should be the only place where explicit CSS is written.</p>
 <p>Components should integrate globals as mixins, and be written with language that denotes their &quot;purpose&quot; on the page. Think of components as &quot;sections&quot; or &quot;parts&quot; of a website.</p>
 <p>App.less contains nothing but import statements that compile your components and globals.</p>
